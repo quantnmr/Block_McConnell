@@ -27,11 +27,11 @@ def _(mo):
     # mo.hstack([left_img_md, right_img_md])
     import base64, pathlib
 
-    p = pathlib.Path("exchange-illustration.png")  # or "exchange-illustration.png"
+    p = pathlib.Path("public/exchange-illustration.png")  # or "exchange-illustration.png"
     data = base64.b64encode(p.read_bytes()).decode("ascii")
     left_img_md = mo.md(f'<img src="data:image/png;base64,{data}" width="500">')
 
-    p = pathlib.Path("bloch-mcconnell.png")  # or "exchange-illustration.png"
+    p = pathlib.Path("public/bloch-mcconnell.png")  # or "exchange-illustration.png"
     data = base64.b64encode(p.read_bytes()).decode("ascii")
 
     right_img_md = mo.md(f'<img src="data:image/png;base64,{data}" width="500">')
